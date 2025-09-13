@@ -95,7 +95,7 @@ const Contact = () => {
               Contact us today to schedule your consultation or ask any questions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="100">
-              <Link to="/contact">
+              <Link to="/booking">
                 <Button className="btn-hero" asChild>
                   <span>
                     <Calendar className="mr-2 w-4 h-4" />
