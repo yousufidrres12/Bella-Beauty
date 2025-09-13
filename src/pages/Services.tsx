@@ -153,9 +153,11 @@ const Services = () => {
               Discover our comprehensive range of advanced beauty treatments designed to enhance your natural radiance 
               and boost your confidence. Each service is performed by our expert team using the latest technology.
             </p>
-            <Button className="btn-hero">
-              Book Free Consultation
-            </Button>
+            <Link to="/booking">
+              <Button className="btn-hero" asChild>
+                <span>Book Free Consultation</span>
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
