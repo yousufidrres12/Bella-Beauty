@@ -177,7 +177,7 @@
   }
 
   .heading-hero {
-    @apply text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight;
+    @apply text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.1];
   }
 
   .heading-section {
