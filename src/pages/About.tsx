@@ -83,14 +83,14 @@ const About = () => {
               With years of expertise and a passion for beauty, we provide personalized treatments that enhance 
               your natural beauty and boost your confidence.
             </p>
-            <Link to="#team">
+            <a href="#team">
               <Button className="btn-hero" asChild>
                 <span>
                   Meet Our Team
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </span>
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -184,8 +184,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Meet Our Team */}
-      <section className="section-padding bg-background">
+  {/* Meet Our Team */}
+  <section id="team" className="section-padding bg-background">
         <div className="section-container">
           <div className="text-center mb-16" data-aos="fade-up">
             <h2 className="heading-section text-gradient">Meet Our Expert Team</h2>
@@ -260,9 +260,9 @@ const About = () => {
               Join hundreds of satisfied clients who trust us with their beauty journey. Book your consultation today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/booking">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/20 hover:border-white border-2 border-transparent" asChild>
-                  <span>Book Consultation</span>
+                  <span>Book Free Consultation</span>
                 </Button>
               </Link>
               <Link to="/services">

@@ -84,7 +84,7 @@ const Home = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
-                <Link to="/contact">
+                <Link to="/booking">
                   <Button className="btn-hero" asChild>
                     <span>Book Free Consultation</span>
                   </Button>
@@ -292,7 +292,7 @@ const Home = () => {
               Book your free consultation today and discover how we can help you achieve your beauty goals
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/booking">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/20 hover:border-white border-2 border-transparent" asChild>
                   <span>Book Free Consultation</span>
                 </Button>
