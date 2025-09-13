@@ -90,7 +90,7 @@ const Blog = () => {
       <section className="section-padding bg-gradient-soft" data-aos="fade-up">
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h1 className="heading-hero text-gradient mb-6">
+            <h1 className="heading-hero text-gradient mb-6 min-h-0 pt-4" style={{overflow: 'visible', display: 'inline-block'}}>
               Beauty Tips & Insights
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
