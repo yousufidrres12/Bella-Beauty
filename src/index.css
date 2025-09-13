@@ -177,7 +177,7 @@
   }
 
   .heading-hero {
-    @apply text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.25] pb-4 align-baseline overflow-visible;
+    @apply text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-[1.3] pb-6 align-baseline overflow-visible;
   }
 
   .heading-section {
