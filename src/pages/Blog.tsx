@@ -91,25 +91,15 @@ const Blog = () => {
         <div className="section-container">
           <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
             <h1
-              className="heading-hero text-gradient mb-16 min-h-0 pt-8 relative"
+              className="heading-hero text-gradient mb-20 min-h-0 pt-10 relative"
               style={{
                 overflow: 'visible',
                 display: 'block',
                 lineHeight: 1.35,
-                paddingBottom: '2.5rem',
+                paddingBottom: '3.5rem',
+                transform: 'translateY(-0.15em)',
               }}
             >
-              {/* Pseudo-element for extra space below descenders */}
-              <span style={{
-                display: 'block',
-                height: '0.5em',
-                width: '100%',
-                position: 'absolute',
-                left: 0,
-                bottom: '-0.5em',
-                pointerEvents: 'none',
-                content: '""',
-              }} />
               Beauty Tips & Insights
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
