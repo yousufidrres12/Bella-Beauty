@@ -241,12 +241,12 @@ const Services = () => {
                   </div>
 
                   <div className="flex space-x-3 pt-2">
-                    <Link to="/contact" className="flex-1">
+                    <Link to="/booking" className="flex-1">
                       <Button className="w-full btn-hero text-sm" asChild>
                         <span>Book Now</span>
                       </Button>
                     </Link>
-                    <Link to="/">
+                    <Link to="/contact">
                       <Button variant="outline" className="w-full btn-ghost text-sm" asChild>
                         <span>
                           Learn More
@@ -386,7 +386,7 @@ const Services = () => {
               Book a free consultation with our experts to create a personalized treatment plan
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
+              <Link to="/booking">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/20 hover:border-white border-2 border-transparent" asChild>
                   <span>Free Consultation</span>
                 </Button>

@@ -103,20 +103,20 @@ const Gallery = () => {
               See the amazing transformations our clients have achieved with our advanced treatments. 
               Real results from real people who trust us with their beauty journey.
             </p>
-            <Link to="/">
+            <a href="#before-after-gallery">
               <Button className="btn-hero" asChild>
                 <span>
                   <Eye className="mr-2 w-4 h-4" />
                   View All Results
                 </span>
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Filter Options */}
-      <section className="py-8 bg-background border-b border-border/30">
+  {/* Filter Options */}
+  <section id="before-after-gallery" className="py-8 bg-background border-b border-border/30">
         <div className="section-container">
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Filter className="w-5 h-5 text-muted-foreground" />
@@ -173,7 +173,7 @@ const Gallery = () => {
                   
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Link to="/">
+                    <Link to="/contact">
                       <Button variant="secondary" className="bg-white text-primary" asChild>
                         <span>
                           <Eye className="mr-2 w-4 h-4" />
@@ -201,10 +201,10 @@ const Gallery = () => {
                     </div>
                   </div>
 
-                  <Link to="/services">
+                  <Link to="/contact">
                     <Button variant="outline" className="w-full btn-ghost" asChild>
                       <span>
-                        Learn About This Treatment
+                        Learn More About This Treatment
                         <ArrowRight className="ml-2 w-3 h-3" />
                       </span>
                     </Button>
@@ -218,7 +218,7 @@ const Gallery = () => {
             <p className="text-muted-foreground mb-6">
               Results may vary. Individual results depend on skin type, condition, and adherence to treatment plans.
             </p>
-            <Link to="/contact">
+            <Link to="/booking">
               <Button className="btn-hero" data-aos="fade-up" data-aos-delay="100" asChild>
                 <span>Schedule Your Consultation</span>
               </Button>
@@ -292,7 +292,7 @@ const Gallery = () => {
               and let us create a personalized treatment plan for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="100">
-              <Link to="/contact">
+              <Link to="/booking">
                 <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/20 hover:border-white border-2 border-transparent" asChild>
                   <span>Book Free Consultation</span>
                 </Button>

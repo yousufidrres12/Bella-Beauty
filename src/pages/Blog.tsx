@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { useState, useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User, ArrowRight, BookOpen } from "lucide-react";
 import blog1Img from "@/assets/Blog1.jpg";
@@ -10,6 +11,10 @@ import blog4Img from "@/assets/Blog4.jpg";
 import blog5Img from "@/assets/Blog5.jpg";
 
 const Blog = () => {
+  // Newsletter subscribe state
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterSuccess, setNewsletterSuccess] = useState(false);
+  const emailInputRef = useRef(null);
   const featuredPost = {
     id: 1,
     title: "The Ultimate Guide to HydraFacials: Everything You Need to Know",
@@ -106,20 +111,25 @@ const Blog = () => {
               Stay informed with the latest beauty trends, treatment guides, and expert tips 
               from our professional team. Your guide to looking and feeling your best.
             </p>
-            <Link to="/">
-              <Button className="btn-hero" asChild>
-                <span>
-                  <BookOpen className="mr-2 w-4 h-4" />
-                  Explore All Articles
-                </span>
-              </Button>
-            </Link>
+            <button
+              className="btn-hero flex items-center"
+              onClick={() => {
+                const section = document.getElementById('all-articles');
+                if (section) {
+                  section.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              type="button"
+            >
+              <BookOpen className="mr-2 w-4 h-4" />
+              Explore All Articles
+            </button>
           </div>
         </div>
       </section>
 
       {/* Featured Article */}
-      <section className="section-padding bg-background">
+  <section id="all-articles" className="section-padding bg-background">
         <div className="section-container">
           <div className="mb-12">
             <h2 className="text-2xl font-heading font-semibold text-center mb-8 text-gradient">Featured Article</h2>
@@ -293,18 +303,40 @@ const Blog = () => {
                 and exclusive offers delivered to your inbox.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <form
+                className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+                onSubmit={e => {
+                  e.preventDefault();
+                  if (newsletterEmail.trim()) {
+                    setNewsletterSuccess(true);
+                    setNewsletterEmail("");
+                    if (emailInputRef.current) {
+                      emailInputRef.current.blur();
+                    }
+                  }
+                }}
+              >
                 <input
+                  ref={emailInputRef}
                   type="email"
+                  value={newsletterEmail}
+                  onChange={e => {
+                    setNewsletterEmail(e.target.value);
+                    setNewsletterSuccess(false);
+                  }}
                   placeholder="Enter your email address"
                   className="flex-1 px-4 py-3 rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary"
+                  required
                 />
-                <Link to="/">
-                  <Button className="btn-hero" asChild>
-                    <span>Subscribe</span>
-                  </Button>
-                </Link>
-              </div>
+                <Button className="btn-hero" type="submit">
+                  <span>Subscribe</span>
+                </Button>
+              </form>
+              {newsletterSuccess && (
+                <div className="text-green-600 mt-3 text-sm animate-fade-in">
+                  Thank you for subscribing! 🎉
+                </div>
+              )}
               
               <p className="text-xs text-muted-foreground mt-4">
                 We respect your privacy. Unsubscribe anytime.
