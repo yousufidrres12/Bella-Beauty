@@ -65,12 +65,12 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-  <section className="relative overflow-hidden bg-gradient-soft" data-aos="fade-up">
+  <section className="relative overflow-hidden bg-gradient-soft" data-aos="fade-up" data-aos-duration="1200">
         <div className="section-container section-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200">
               <div className="space-y-4">
-                <div className="inline-flex items-center space-x-2 bg-pastel-pink px-4 py-2 rounded-full">
+                <div className="inline-flex items-center space-x-2 bg-pastel-pink px-4 py-2 rounded-full animate-shimmer">
                   <Sparkles className="w-4 h-4 text-primary" />
                   <span className="text-sm font-medium text-primary">Premium Beauty Clinic</span>
                 </div>
@@ -83,7 +83,7 @@ const Home = () => {
                 </p>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-4" data-aos="fade-up" data-aos-delay="100">
+              <div className="flex flex-col sm:flex-row gap-4" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="1000">
                 <Link to="/contact">
                   <Button className="btn-hero" asChild>
                     <span>Book Free Consultation</span>
@@ -99,7 +99,7 @@ const Home = () => {
                 </Link>
               </div>
 
-              <div className="flex items-center space-x-8 pt-4" data-aos="fade-up" data-aos-delay="200">
+              <div className="flex items-center space-x-8 pt-4" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1200">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-primary">
                     <AnimatedCounter end={500} duration={2500} />+
@@ -121,7 +121,7 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="relative animate-float" data-aos="zoom-in" data-aos-delay="300">
+            <div className="relative animate-float" data-aos="flip-left" data-aos-delay="500" data-aos-duration="1200">
               <div className="relative">
                 <img
                   src={heroImage}
@@ -146,9 +146,9 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-  <section className="section-padding bg-background" data-aos="fade-up" data-aos-delay="200">
+  <section className="section-padding bg-background" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
         <div className="section-container">
-          <div className="text-center mb-16" data-aos="fade-up">
+          <div className="text-center mb-16" data-aos="fade-down" data-aos-delay="100" data-aos-duration="1000">
             <h2 className="heading-section text-gradient">Why Choose Bella Beauty?</h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
               We combine cutting-edge technology with personalized care to deliver exceptional results
@@ -178,7 +178,7 @@ const Home = () => {
                 description: "Consistently rated as the top beauty clinic in the city"
               }
             ].map((feature, index) => (
-              <Card key={index} className="card-elegant hover:scale-105 transition-transform duration-300" data-aos="fade-up" data-aos-delay={index * 100}>
+              <Card key={index} className="card-elegant hover:scale-105 transition-transform duration-300 animate-glow" data-aos="zoom-in-up" data-aos-delay={index * 150} data-aos-duration="1000">
                 <CardContent className="p-6 text-center">
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                     <feature.icon className="w-8 h-8 text-white" />
@@ -193,9 +193,9 @@ const Home = () => {
       </section>
 
       {/* Featured Services */}
-      <section className="section-padding bg-gradient-soft">
+  <section className="section-padding bg-gradient-soft" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
         <div className="section-container">
-          <div className="text-center mb-16" data-aos="fade-up">
+          <div className="text-center mb-16" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
             <h2 className="heading-section text-gradient">Featured Treatments</h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
               Discover our most popular services designed to enhance your natural beauty
@@ -204,12 +204,12 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="card-treatment overflow-hidden group" data-aos="fade-up" data-aos-delay={index * 100}>
+              <Card key={index} className="card-treatment overflow-hidden group animate-float-sm" data-aos="zoom-in" data-aos-delay={index * 200} data-aos-duration="1000">
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 group-hover:brightness-105 transition-transform duration-500"
                   />
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
                     <span className="text-sm font-semibold text-primary">{service.price}</span>
@@ -240,9 +240,9 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-background">
+  <section className="section-padding bg-background" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1200">
         <div className="section-container">
-          <div className="text-center mb-16" data-aos="fade-up">
+          <div className="text-center mb-16" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
             <h2 className="heading-section text-gradient">What Our Clients Say</h2>
             <p className="text-body text-muted-foreground max-w-2xl mx-auto">
               Real stories from real clients who trust us with their beauty journey
@@ -251,7 +251,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="card-testimonial" data-aos="fade-up" data-aos-delay={index * 100}>
+              <Card key={index} className="card-testimonial animate-float-xs" data-aos="flip-up" data-aos-delay={index * 200} data-aos-duration="1000">
                 <CardContent className="p-0">
                   <div className="p-6">
                     <div className="flex items-center mb-4">
@@ -267,7 +267,7 @@ const Home = () => {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-20 h-20 rounded-full object-cover mr-4"
+                      className="w-20 h-20 rounded-full object-cover mr-4 shadow-lg transition-shadow duration-500 hover:shadow-pink-200"
                     />
                     <div>
                       <div className="font-semibold text-foreground">{testimonial.name}</div>
@@ -282,7 +282,7 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-  <section className="section-padding bg-gradient-primary" data-aos="fade-up">
+  <section className="section-padding bg-gradient-primary" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
         <div className="section-container text-center">
           <div className="max-w-3xl mx-auto space-y-8" data-aos="fade-up">
             <h2 className="heading-section text-white">
